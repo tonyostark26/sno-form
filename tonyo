@@ -1,0 +1,214 @@
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.40942" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.40942" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.40942" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.40942" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.40942" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.newPaymentUI = true;
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+      JotForm.setPhoneMaskingValidator( 'input_6_full', '(####) ###-####' );
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("5", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("5", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
+      JotForm.alterTexts(undefined);
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"heading","qid":"1","text":"","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"name","qid":"3","text":"Name","type":"control_fullname"},{"description":"","name":"address","qid":"4","text":"Address","type":"control_address"},{"description":"","name":"date","qid":"5","text":"Date","type":"control_datetime"},{"description":"","name":"phoneNumber","qid":"6","text":"Phone Number","type":"control_phone"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"name","qid":"3","text":"Name","type":"control_fullname"},{"description":"","name":"address","qid":"4","text":"Address","type":"control_address"},{"description":"","name":"date","qid":"5","text":"Date","type":"control_datetime"},{"description":"","name":"phoneNumber","qid":"6","text":"Phone Number","type":"control_phone"}]);}, 20); 
+</script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.40942"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.40942" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.40942" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+    }
+  
+    .form-all {
+      color: #2C3345;
+    }
+    .form-header-group .form-header {
+      color: #2C3345;
+    }
+    .form-header-group .form-subHeader {
+      color: #2C3345;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #2C3345;
+    }
+    .form-sub-label {
+      color: #464d5f;
+    }
+  
+    .supernova {
+      background-color: #f3f3fe;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #fff;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  .form-all:before { content: none; } .form-all { margin-top: 72px; }/*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" action="https://submit.jotform.com/submit/231007404803039" method="post" name="form_231007404803039" id="231007404803039" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231007404803039" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div style="display:table;width:100%">
+          <div class="form-header-group hasImage header-large" data-imagealign="Left">
+            <div class="header-logo"><img src="https://www.jotform.com/uploads/anthonyhalum26/form_files/sno.6435eb9c8c2496.26233926.png" alt="" width="340" class="header-logo-left" /></div>
+            <div class="header-text httal htvam">
+              <h1 id="header_1" class="form-header" data-component="header"></h1>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="first_3"> Name<span class="form-required">*</span> </label>
+        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_name[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_name[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_phone" id="id_6" data-compound-hint="Example: 0966 425 7883"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6_full"> Phone Number<span class="form-required">*</span> </label>
+        <div id="cid_6" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_6_full" name="q6_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_6 tel" style="width:310px" data-masked="true" value="" placeholder="Example: 0966 425 7883" data-component="phone" aria-labelledby="label_6" required="" /><label class="form-sub-label is-empty" for="input_6_full" id="sublabel_6_masked" style="min-height:13px" aria-hidden="false"></label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_4" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4_city"> Address </label>
+        <div id="cid_4" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_4_addr_line1" name="q4_address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_4 address-line1" value="" data-component="address_line_1" aria-labelledby="label_4 sublabel_4_addr_line1" /><label class="form-sub-label" for="input_4_addr_line1" id="sublabel_4_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_4_addr_line2" name="q4_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_4 off" value="" data-component="address_line_2" aria-labelledby="label_4 sublabel_4_addr_line2" /><label class="form-sub-label" for="input_4_addr_line2" id="sublabel_4_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_4_city" name="q4_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_4 address-level2" value="" data-component="city" aria-labelledby="label_4 sublabel_4_city" required="" /><label class="form-sub-label" for="input_4_city" id="sublabel_4_city" style="min-height:13px" aria-hidden="false">Type Address</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_4_state" name="q4_address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_4 address-level1" value="" data-component="state" aria-labelledby="label_4 sublabel_4_state" /><label class="form-sub-label" for="input_4_state" id="sublabel_4_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-zip-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_4_postal" name="q4_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_4 postal-code" value="" data-component="zip" aria-labelledby="label_4 sublabel_4_postal" /><label class="form-sub-label" for="input_4_postal" id="sublabel_4_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_datetime" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="lite_mode_5"> Date<span class="form-required">*</span> </label>
+        <div id="cid_5" class="form-input-wide jf-required" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="month_5" name="q5_date[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_month" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="month_5" id="sublabel_5_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="day_5" name="q5_date[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_day" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="day_5" id="sublabel_5_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="year_5" name="q5_date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_year" /><label class="form-sub-label" for="year_5" id="sublabel_5_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_5" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="mmddyyyy" data-seperator="/" placeholder="MM/DD/YYYY" autoComplete="off" aria-labelledby="label_5 sublabel_5_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_5_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_5" id="sublabel_5_litemode" style="min-height:13px" aria-hidden="false">Date</label></span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+</script>
+<script>
+    JotForm.poweredByText = "Powered by TonyoStark";
+</script>
+<input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="231007404803039" />
+<script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='231007404803039'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "231007404803039-231007404803039";
+    }
+</script>
+<div class="formFooter-heightMask"></div>
+<div class="formFooter f6 branding21">
+    <div class="formFooter-wrapper formFooter-leftSide"><a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=231007404803039&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://tonyostark.w3spaces.com/tonyostark.png" alt="TonyoStark Logo" style="height: 44px;"></a></div>
+    <div class="formFooter-wrapper formFooter-rightSide">
+        <span class="formFooter-text" id="poweredByText"></span>
+    </div>
+</div>
+</form>
+<script type="text/javascript">
+    document.getElementById('poweredByText').textContent = JotForm.poweredByText;
+    JotForm.ownerView=true;
+</script>
+<script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.40942"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.40942"></script>
